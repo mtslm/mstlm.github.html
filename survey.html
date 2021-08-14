@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko" class>
+
+<head>
+    <meta charset="utf-8">
+    <title>survey</title>
+    <style>
+        @font-face {
+            src : url("C:/Users/qazsd/Downloads/fonts/BMJUA_ttf.ttf"); 
+            font-family: "jua" ;
+        }
+        caption{
+            font-family: "jua";
+            font-size: 60px; 
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-bottom: 2px solid #444444;
+            border-left: 2px solid #444444;
+            border-right: 2px solid #444444;
+            margin: auto;
+            text-align: center;
+            width: 60%;
+        }
+        th {
+            font-family: "jua";
+            padding: 5px;
+            background-color: #bbdefb;
+            border-top: 2px solid #444444;
+            border-bottom: 2px solid #444444;
+            font-size: 30px;
+        }
+        td{
+            padding: 10px;
+            font-family: "jua";
+            font-size: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body> 
+    <div class="scrollbox">
+        <table cellpadding="0" cellspacing="0" class="skku-table" summary="건강생활습관 자가진단을 위한 표">
+            <caption>
+                건강생활습관 자가진단</caption>
+            <colgroup>
+                <col width="*%">
+            </colgroup>
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 가족,친구 ]</th>
+                </tr>
+                <tr>
+                    <td class="td_left no_right no_botm">
+                        1. 가족이나 친구와 이야기를 나눌 때에는 솔직하고 분명하게 나눈다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[1]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[1]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[1]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[1]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[1]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left no_right no_botm">
+                        2. 진실되고 정감어린 대화를 나눈다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[2]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[2]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[2]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[2]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[2]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        3. 내가 어려울 때에는 위로를 받는다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[3]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[3]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[3]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[3]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[3]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 활동성 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        4. 하루 30분 이상의 적극적인 운동. (예) 달리기, 줄넘기, 자전거 타기 등.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[4]=4" title="주3회이상" type="radio" value="4"> 주 3회이상 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[4]=2" title="주1-2회" type="radio" value="4"> 주1-2회 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[4]=0" title="안함" type="radio" value="0"> 안 함</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        5. 여가 시간에 긴장을 풀고 즐긴다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[5]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[5]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[5]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[5]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[5]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 영양 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        6. 음식을 골고루 먹는다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[6]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[6]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[6]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[6]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[6]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        7. 아침 식사를 한다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[7]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[7]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[7]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[7]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[7]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        8. 달거나 짠 음식, 동물성 지방이 많은 음식을 자주 섭취한다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[8]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[8]=1" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[8]=2" type="radio" value="2">보통 <input name="ans1" onclick="ans[8]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[8]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        9. 나의 비만도는?<br>
+                        비만도 = 현재 체중 /표준 체중<br>
+                        표준체중 = [키(㎝) - 100]*0.9</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[9]=0" title="5%이내" type="radio" value="0"> 5%이내 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[9]=1" title="5-10%" type="radio" value="1"> 5-10% &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[9]=2" title="10-20%" type="radio" value="2"> 10-20% &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[9]=3" title="20-40%" type="radio" value="3"> 20-40% &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[9]=4" title="40%이상" type="radio" value="4"> 40%이상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 담배,약물 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        10. 흡연습관</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[10]=0" title="피운적없다" type="radio" value="0"> 피운 적없다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[10]=1" title="6개월이상금연" type="radio" value="1"> 6개월 이상 금연 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[10]=2" title="금연후 6개월미만" type="radio" value="2"> 금연후 6개월미만 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[10]=3" title="하루한갑미만" type="radio" value="3"> 하루 한갑 미만 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[10]=4" title="하루한갑이상" type="radio" value="4"> 하루 한갑 이상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        11. 약을 복용할 때는 의사-약사의 지시에 따른다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[11]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[11]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[11]=2" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[11]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[11]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        12. 카페인이 함유된 음료(커피, 차, 콜라)의 하루 평균 섭취량</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[12]=0" title="안마심" type="radio" value="0"> 안마심 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[12]=1" title="1-2잔" type="radio" value="1"> 1-2잔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[12]=2" title="3-4잔" type="radio" value="2"> 3-4잔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[12]=3" title="5-6잔" type="radio" value="3"> 5-6잔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[12]=4" title="7잔이상" type="radio" value="4"> 7잔 이상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 음주 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        13. 일주일 평균 술 마시는 날</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[13]=0" title="안마심" type="radio" value="0"> 안마심 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[13]=1" title="1일" type="radio" value="1"> 1일 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[13]=2" title="2일" type="radio" value="2"> 2일 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[13]=3" title="3일" type="radio" value="3"> 3일 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[13]=4" title="4일이상" type="radio" value="4"> 4일이상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        14. 음주 운전</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[14]=0" title="전혀안함" type="radio" value="0"> 전혀 안함 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[14]=1" title="거의안함" type="radio" value="1"> 거의 안함 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[14]=2" title="가끔" type="radio" value="2"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[14]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[14]=4" title="매우자주" type="radio" value="4"> 매우 자주</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 수면, 안전벨트,스트레스 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        15. 하루 7-9 시간 자는 경우</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[15]=0" title="매일 주 5-6일" type="radio" value="0"> 매일 주 5-6일 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[15]=1" title="주3-4일" type="radio" value="1"> 주 3-4일 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[15]=2" title="주 1-2일" type="radio" value="2"> 주 1-2일 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[15]=3" title="거의 없음" type="radio" value="3"> 거의 없음</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        16. 안전 벨트 사용빈도</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[16]=0" title="항상" type="radio" value="0"> 항상 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[16]=1" title="대체로" type="radio" value="1"> 대체로 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[16]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[16]=3" title="가끔" type="radio" value="3"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[16]=4" title="착용안함" type="radio" value="4"> 착용 안함</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        17. 지난 1년 동안 신경을 곤두세웠던 사건</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[17]=0" title="없음" type="radio" value="0"> 없음 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[17]=1" title="1-2건" type="radio" value="1"> 1-2건 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[17]=2" title="3-4건" type="radio" value="2"> 3-4건 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[17]=3" title="5-6건" type="radio" value="3"> 5-6건 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[17]=4" title="7건이상" type="radio" value="4"> 7건 이상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 성격유형 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        18. 매사에 조급해 하고 안달함</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[18]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[18]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[18]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[18]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[18]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        19. 경쟁을 좋아하고 꼭 이기려 함</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[19]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[19]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[19]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[19]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[19]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        20. 남을 곧잘 미워하고 화를 잘 냄</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[20]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[20]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[20]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[20]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[20]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 통찰력 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        21. 매사를 긍정적으로 생각한다.</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[21]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[21]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[21]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[21]=3" type="radio" value="3"> 자주 <input name="ans1" onclick="ans[21]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        22. 불안과 걱정</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[22]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[22]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[22]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[22]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[22]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        23. 우울할 때</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[23]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[23]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[23]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[23]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[23]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="th_left no_right">
+                        [ 직업과 역할 ]</th>
+                </tr>
+                <tr>
+                    <td class="no_right td_left no_botm">
+                        24. 주변 사람들과의 관계가 원만함</td>
+                </tr>
+                <tr>
+                    <td class="no_right td_left">
+                        <form method="get">
+                            <input name="ans1" onclick="ans[24]=0" title="아니다" type="radio" value="0"> 아니다 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[24]=1" title="가끔" type="radio" value="1"> 가끔 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[24]=2" title="보통" type="radio" value="2"> 보통 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[24]=3" title="자주" type="radio" value="3"> 자주 &nbsp;&nbsp;&nbsp;&nbsp; <input name="ans1" onclick="ans[24]=4" title="항상" type="radio" value="4"> 항상</form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>   
